@@ -68,9 +68,11 @@
       body:new FormData(f)
     }).then(function(r){return r.json()}).then(function(d){
       if(b) b.disabled=false;
-      if(d && (d.success===true || d.success==="true")){ f.reset(); return; }
+      if(d && (d.success===true || d.success==="true")) f.reset();
+    }).catch(function(){
+      if(b) b.disabled=false;
       f.submit();
-    }).catch(function(){ f.submit(); });
+    });
   });
 })();
 </script>
