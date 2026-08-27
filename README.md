@@ -1,7 +1,7 @@
 # Docly Apps
 
-Company one-pager for **Docly Apps, LLC** (Summerville, SC). This is the holding company, not a product site.
+Company site for **Docly Apps, LLC**. Holding company, not a product storefront.
 
-Live: https://bhub36.github.io/doclyapps/
+Live: https://doclyapps.com
 
-Custom domain (`doclyapps.com`) is not wired yet.
+Pages: Home, About, Contact, Privacy, Terms. Fonts are Fraunces + Source Sans 3.

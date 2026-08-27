@@ -1,0 +1,6 @@
+<svg width="256" height="256" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Docly mark</title>
+  <desc id="desc">The Docly answer bubble: a deep green speech bubble holding one clear brick-orange point.</desc>
+  <path d="M11 0 H23 A11 11 0 0 1 34 11 V23 A11 11 0 0 1 23 34 H3 A3 3 0 0 1 0 31 V11 A11 11 0 0 1 11 0 Z" fill="#1d3a2f"/>
+  <circle cx="17" cy="17" r="5" fill="#b4551f"/>
+</svg>
