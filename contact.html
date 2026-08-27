@@ -31,7 +31,7 @@
       </div>
       <form class="form" action="https://formsubmit.co/hello@doclyapps.com" method="post">
         <input type="hidden" name="_subject" value="Docly Apps contact">
-        <input type="hidden" name="_next" value="https://doclyapps.com/contact.html">
+        <input type="hidden" name="_next" value="http://doclyapps.com/contact.html">
         <input type="hidden" name="_captcha" value="false">
         <label>Name <input type="text" name="name" required></label>
         <label>Email <input type="email" name="email" required></label>
@@ -54,5 +54,25 @@
       </div>
     </footer>
   </div>
+<script>
+(function(){
+  var f=document.querySelector("form.form");
+  if(!f) return;
+  f.addEventListener("submit",function(e){
+    e.preventDefault();
+    var b=f.querySelector("button.send");
+    if(b) b.disabled=true;
+    fetch("https://formsubmit.co/ajax/hello@doclyapps.com",{
+      method:"POST",
+      headers:{Accept:"application/json"},
+      body:new FormData(f)
+    }).then(function(r){return r.json()}).then(function(d){
+      if(b) b.disabled=false;
+      if(d && (d.success===true || d.success==="true")){ f.reset(); return; }
+      f.submit();
+    }).catch(function(){ f.submit(); });
+  });
+})();
+</script>
 </body>
 </html>
