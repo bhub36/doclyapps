@@ -27,7 +27,7 @@
   .wrap {
     max-width: 640px;
     margin: 0 auto;
-    padding: 20px max(24px, env(safe-area-inset-left)) 48px max(24px, env(safe-area-inset-right));
+    padding: 20px max(24px, env(safe-area-inset-left)) 56px max(24px, env(safe-area-inset-right));
   }
   header {
     display: flex;
@@ -67,7 +67,7 @@
   .lead {
     font-size: 1.08rem;
     color: var(--mute);
-    margin-bottom: 32px;
+    margin-bottom: 8px;
     max-width: 34em;
   }
   h2 {
@@ -76,8 +76,15 @@
     letter-spacing: .14em;
     text-transform: uppercase;
     color: var(--mute);
-    margin-bottom: 12px;
+    margin: 36px 0 12px;
   }
+  .prose {
+    font-size: 1.05rem;
+    color: var(--ink);
+    max-width: 34em;
+    line-height: 1.55;
+  }
+  .prose p + p { margin-top: 14px; }
   .apps {
     list-style: none;
     border-top: 1px solid var(--line);
@@ -137,7 +144,12 @@
 
     <p class="kicker">The company</p>
     <h1>We make separate products.</h1>
-    <p class="lead">Docly Apps, LLC builds software. Each app is its own thing, with its own site. This page is the company, not a storefront.</p>
+    <p class="lead">Each app is its own thing, with its own site. This page is the company, not a storefront.</p>
+
+    <h2>What we do</h2>
+    <div class="prose">
+      <p>Docly Apps, LLC builds practical software for work that already exists. Manuals that don&rsquo;t match how the team actually runs. Seasons run off spreadsheets. Tiny businesses tracking money in a notebook. Each of those gets its own product and its own site. We&rsquo;d rather ship one clear tool than a pile of features nobody asked for.</p>
+    </div>
 
     <h2>Products</h2>
     <ul class="apps">
@@ -187,6 +199,11 @@
         </a>
       </li>
     </ul>
+
+    <h2>About</h2>
+    <div class="prose">
+      <p>Bruce Hubbard founded Docly Apps in 2026 in Summerville, South Carolina. It&rsquo;s a one-person company. The work comes from using the messy version first, then building the version other people can actually use.</p>
+    </div>
 
     <footer>
       Docly Apps, LLC<br>
