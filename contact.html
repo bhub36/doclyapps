@@ -29,10 +29,12 @@
       <div class="lead">
         <p>This is the company inbox. I read it. If you came here to buy something or start a trial, you’re in the wrong place. Each product has its own site. Home has the list.</p>
       </div>
-      <form class="form" action="https://formsubmit.co/hello@doclyapps.com" method="post">
-        <input type="hidden" name="_subject" value="Docly Apps contact">
-        <input type="hidden" name="_next" value="https://doclyapps.com/contact.html">
-        <input type="hidden" name="_captcha" value="false">
+      <form class="form" action="https://api.web3forms.com/submit" method="post">
+        <input type="hidden" name="access_key" value="b9f13158-02b3-4437-82ad-88683cbc4c8c">
+        <input type="hidden" name="subject" value="Docly Apps contact">
+        <input type="hidden" name="from_name" value="Docly Apps">
+        <input type="hidden" name="redirect" value="https://doclyapps.com/contact.html">
+        <input type="checkbox" name="botcheck" hidden autocomplete="off" tabindex="-1">
         <label>Name <input type="text" name="name" required></label>
         <label>Email <input type="email" name="email" required></label>
         <label>Message <textarea name="message" required></textarea></label>
@@ -62,7 +64,7 @@
     e.preventDefault();
     var b=f.querySelector("button.send");
     if(b) b.disabled=true;
-    fetch("https://formsubmit.co/ajax/hello@doclyapps.com",{
+    fetch("https://api.web3forms.com/submit",{
       method:"POST",
       headers:{Accept:"application/json"},
       body:new FormData(f)
